@@ -1,0 +1,318 @@
+CREATE TABLE users(
+	user_id bigint NULL PRIMARY KEY,
+	Role_id bigint NULL,
+	Fname nchar(10) NULL,
+	Mname nchar(10) NULL,
+	Lname nchar (10) NULL,
+	Username nchar(10) NULL,
+	Mobile nchar(10) NULL,
+	Email nchar(10) NULL,
+	Password nchar(10) NULL,
+	Registered_at date NULL,
+	Last_login Date NULL,
+	Intro text NULL,
+	profile text NULL
+);
+INSERT INTO users
+           (user_id,Role_id,Fname,Mname,Lname,Username,Mobile,Email,Password,Registered_at,Last_login,Intro,profile)
+     VALUES
+(1,421,'sarai','James','wanjiru','s1234',0710101010,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(2,567,'Shannon','musa','wanjiru','567',1505-644-2204,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(3,124,'Ethel','Nathan','wanjiru','124',1202-918-2132,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(4,432,'Jane','James','wanjiru','432',202-555-0132,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(8,984,'Sheila','mwangi','wanjiru','984',202-555-0143,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(6,156,'Jane','Nathan','wanjiru','156',202-555-0877,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(7,245,'Ethel','musa','wanjiru','245',202-555-0922,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(9,575,'Sheila','mwangi','wanjiru','575',0710101010,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(10,456,'Ethel','James','wanjiru','456',202-555-0877,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(11,980,'Shannon','mwangi','wanjiru','980',202-555-0714,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(13,476,'sarai','Nathan','wanjiru','476',202-555-0027,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(14,124,'sarai','mwangi','wanjiru','124',202-555-0955,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(15,762,'Shannon','James','wanjiru','762',202-555-0955,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(16,907,'Ethel','mwangi','wanjiru','907',202-555-0742,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(17,125,'Sheila','James','wanjiru','125',202-555-0845,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(18,984,'Sheila','mwangi','wanjiru','984',202-555-0143,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(19,156,'Jane','Nathan','wanjiru','156',202-555-0877,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(20,245,'Ethel','musa','wanjiru','245',202-555-0922,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(21,575,'Sheila','mwangi','wanjiru','575',0710101010,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(22,432,'Jane','James','wanjiru','432',202-555-0132,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(23,984,'Sheila','mwangi','wanjiru','984',202-555-0143,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(24,156,'Jane','Nathan','wanjiru','156',202-555-0877,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(25,245,'Ethel','musa','wanjiru','245',202-555-0922,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none'),
+(26,575,'Sheila','mwangi','wanjiru','575',0710101010,'sara12345','1234ss','2000-3-3','2000-3-3','hey there','none');
+SELECT * FROM users;
+--DROP TABLE IF EXISTS sold_items CASCADE ;
+
+CREATE TABLE product(
+	product_id bigint NOT NULL,
+	Tittle nchar(10) NULL,
+	Summary text NULL,
+	Type smallint NULL,
+	Created date NULL,
+	Content text NULL);
+ALTER TABLE product ADD PRIMARY KEY (product_id);
+INSERT INTO product(product_id,Tittle,Summary,Type,Created,Content)
+     VALUES(635,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (757,'table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (974,'Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture'),
+	 (346,'coat','wooden ',101,'2012-3-3','wooden baby coat furniture'),
+	 (896,'table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (457,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (796,'Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture'),
+	 (124,' table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (357,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (824,' table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (3477,' coat','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (328,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (249,' table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (568,' Drawers','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (1479,' table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (2579,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (3456,' Drawers','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (942,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture'),
+	 (4579,' table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (268,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture'),
+	 (458,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture'),
+	 (347,' table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (899,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture'),
+	 (427,' Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture'),
+	 (2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture'),
+	 (137,' Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture');
+select * from product;
+
+CREATE TABLE product_meta(
+	meta_id bigint NOT NULL Primary key,
+	productId bigint NOT NULL,
+	keyz varchar(50) NOT NULL,
+	CONSTRAINT constraint_2 
+    FOREIGN KEY (productId) 
+    REFERENCES product (Product_id)
+)inherits (product);
+INSERT INTO product_meta(meta_id,productId,keyz)
+     VALUES
+(942,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',689,458,888),
+(4579,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6889,942,888),
+(2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6489,458,888),
+(942,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',6829,2596,888),
+(2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',689,539,888),
+(4579,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6589,942,888),
+(2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6899,2596,888),
+(796,'Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture',6289,458,888),
+(796,'Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture',6894,2596,888),
+(2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6189,539,888),
+(2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6879,458,888),
+(4579,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6809,539,888),
+(942,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',6189,539,888),
+(796,'Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture',6389,458,888),
+(2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6859,2596,888),
+(942,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',6689,942,888),
+(4579,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6897,2596,888),
+(942,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',6389,539,888),
+(796,'Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture',6289,2596,888),
+(4579,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',6099,2596,888),
+(942,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',6809,539,888)
+;
+select * from product_meta;		 
+
+CREATE TABLE category(
+	category_id bigint NOT NULL PRIMARY KEY,
+	parentId bigint NULL,
+	title varchar(75) NOT NULL,
+	metaTitle varchar(100) NULL,
+	slug varchar(100) NOT NULL,
+	content text NULL);
+INSERT INTO category
+           (category_id,parentId,title,metaTitle,slug,content)
+     VALUES
+		   (156,156,'3D Embroidery','3D Embroidery decor','3D Embroidery decoration','3D Embroidery furniture decoration'),
+		   (679,679,'Flat Embroidery','Flat Embroidery decor','Flat Embroidery decoration','Flat Embroidery furniture decoration'),
+		   (358,358,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (257,104,'Applique','Applique decor','Applique decoration','Applique furniture decoration'),
+		   (457,457,'Flat Embroidery','Flat Embroidery decor','Flat Embroidery decoration','Flat Embroidery furniture decoration'),
+		   (689,689,'3D Embroidery','3D Embroidery decor','3D Embroidery decoration','3D Embroidery furniture decoration'),
+		   (249,246,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (268,268,'Applique','Applique decor','Applique decoration','Applique furniture decoration'),
+		   (964,964,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (247,247,'Applique','Applique decor','Applique decoration','Applique furniture decoration'),
+		   (585,585,'3D Embroidery','modern decor','modern decoration','mordern furniture decoration'),
+		   (246,246,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (657,657,'Flat Embroidery','Flat Embroidery decor','Flat Embroidery decoration','Flat Embroidery furniture decoration'),
+		   (478,478,'Applique','Applique decor','Applique decoration','Applique furniture decoration'),
+		   (753,753,'3D Embroidery','3D Embroidery decor','3D Embroidery decoration','3D Embroidery furniture decoration'),
+		   (685,685,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (258,258,'Applique','Applique decor','Applique decoration','Applique furniture decoration'),
+		   (865,865,'3D Embroidery','3D Embroidery decor','3D Embroidery decoration','3D Embroidery furniture decoration'),
+		   (3758,356,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (7865,7865,'Flat Embroidery','Flat Embroidery decor','Flat Embroidery decoration','Flat Embroidery furniture decoration'),
+		   (1954,1954,'Applique','Applique decor','Applique decoration','Applique furniture decoration'),
+		   (7676,7676,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (356,356,'modern','modern decor','modern decoration','mordern furniture decoration'),
+		   (754,754,'Applique','Applique decor','Applique decoration','Applique furniture decoration');
+select * from category;
+	
+CREATE TABLE product_category(
+	productId bigint NOT NULL,
+	categoryId bigint NOT NULL,
+	CONSTRAINT constraint_2 
+    FOREIGN KEY (productId) 
+    REFERENCES product (Product_id),
+	CONSTRAINT constraint_3 
+    FOREIGN KEY (categoryId) 
+    REFERENCES category (category_id)
+)inherits (category);
+INSERT INTO product_category(productId,categoryId)
+     VALUES (457,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture',457,101,457),
+	 (458,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture',458,101,458),
+	 (137,' Drawers','wooden ',101,'2012-3-3','wooden chest Drawers furniture',137,101,137),
+	 (2596,' table','wooden ',101,'2012-3-3','wooden dinning table furniture',2596,101,2596),
+	 (899,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',899,101,899),
+	 (268,' coat','wooden ',101,'2012-3-3','wooden baby coat furniture',268,101,268),
+	 (328,'cabinets','wooden ',101,'2012-3-3','wooden cabinet furniture',328,101,328);
+select * from product_category;
+
+CREATE TABLE items(
+	Item_id bigint NULL PRIMARY KEY,
+	Product_id bigint NULL,
+	Supplier_id bigint NULL,
+	Order_id bigint NULL,
+	SKU varchar(50) NULL,
+	MRP float NULL,
+	Discount float NULL,
+	Price float NULL,
+	Quantity smallint NULL,
+	Sold smallint NULL,
+	available smallint NULL,
+	Created_by smallint NULL,
+	created_at DATE NULL,
+	CONSTRAINT constraint_4 
+    FOREIGN KEY (Product_id) 
+    REFERENCES product (Product_id));
+	INSERT INTO items
+           (Item_id,Product_id,Supplier_id,Order_id,SKU,MRP,Discount,Price,Quantity,Sold,available,Created_by,created_at)
+     VALUES
+           (3001,631,800,3001,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (30070,631,800,3090,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3020,631,800,3020,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3021,631,800,3021,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3068,631,800,3068,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3078,631,800,3078,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3200,631,800,3200,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (30,631,800,30,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3010,631,800,3010,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3008,631,800,3008,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3002,631,800,3002,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (320,631,800,320,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3033,631,3033,300,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3500,631,800,3500,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (30550,631,800,3060,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3090,631,800,3090,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3005,631,800,3005,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3022,631,800,3002,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3998,631,800,3998,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3009,631,800,3009,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3000,631,800,3000,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3060,631,800,3060,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3003,631,800,3003,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3070,631,800,3070,25480921,7425,200,3000,2,1,1,3,'2020-4-4'),
+		   (3030,631,800,3030,25480921,7425,200,3000,2,1,1,3,'2020-4-4');
+select * from items;
+
+CREATE TABLE address(
+	address_id bigint NOT NULL PRIMARY KEY,
+	userId bigint NULL,
+	orderId bigint NULL,
+	firstName varchar(50) NULL,
+	middleName varchar(50) NULL,
+	lastName varchar(50) NULL,
+	line1 varchar(50) NULL,
+	line2 varchar(50) NULL,
+	city varchar(50) NULL,
+	province varchar(50) NULL,
+	country varchar(50) NULL,
+	createdAt date NOT NULL,
+	updatedAt date NULL,
+	CONSTRAINT constraint_5 
+    FOREIGN KEY (userId) 
+    REFERENCES users (user_id)
+)inherits (users);
+INSERT INTO address(address_id,userId,orderId,firstName,middleName,lastName,mobile,email,line1,line2,city,province,country,createdAt,updatedAt)
+     VALUES
+(5,4,500,'john','doe','done',075555555,'j@gmail.co',075555555,074444444,'nairobi','dagoreti','kenya','2007-4-6','2021-4-6'),
+;
+select * from address;
+
+CREATE TABLE orders(
+	order_id bigint Not NULL PRIMARY KEY,
+	userID bigint,
+	type smallint,
+	status smallint,
+	item_discount FLOAT,
+	Tax FLOAT,
+	shipping FLOAT,
+	total FLOAT,
+	promo FLOAT,
+	grand_total FLOAT,
+	discount FLOAT,
+	created_at date,
+	content text,
+	CONSTRAINT constraint_7 
+    FOREIGN KEY (userID) 
+    REFERENCES users (user_id)
+);
+select * from orders;
+
+CREATE TABLE order_item(
+	id bigint NOT NULL PRIMARY KEY,
+	productId bigint NOT NULL,
+	itemId bigint NOT NULL,
+	orderId bigint NOT NULL,
+	sku varchar(100) NOT NULL,
+	price float NOT NULL,
+	discount float NOT NULL,
+	quantity bigint NOT NULL,
+	createdAt date NOT NULL,
+	updatedAt date NULL,
+	content text NULL,
+	CONSTRAINT constraint_6 
+    FOREIGN KEY (productId) 
+    REFERENCES product (product_id),
+	CONSTRAINT constraint_8 
+    FOREIGN KEY (orderId) 
+    REFERENCES orders (order_id));
+select * from order_item;
+
+CREATE TABLE sold_items(
+	itemID serial PRIMARY KEY,
+	status varchar (30)
+
+CREATE OR REPLACE FUNCTION item_ordered()
+  RETURNS trigger AS
+$$
+BEGIN
+    INSERT INTO order_item VALUES (itemID, "SOLD");
+RETURN NEW;
+END;
+$$
+LANGUAGE 'plpgsql';
+
+CREATE TRIGGER verify_order_1
+  AFTER INSERT
+  ON "orders"
+  FOR EACH ROW
+  EXECUTE PROCEDURE item_ordered();
+
+CREATE TRIGGER verify_order
+ BEFORE UPDATE
+ ON "orders"
+ FOR EACH ROW
+EXECUTE PROCEDURE item_ordered();
+	
+CREATE OR REPLACE PROCEDURE send_email (INOUT email TEXT)
+AS $$
+BEGIN
+RAISE NOTICE 'Procedure Parameter: %', email ;
+END ;
+$$
+LANGUAGE plpgsql ;
+
+
